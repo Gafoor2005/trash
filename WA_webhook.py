@@ -19,7 +19,7 @@ def webhook():
 
     if request.method == "POST":
         data = request.get_json()
-        
+        print(f"recived data: {data}")
         # Check if it's a message event
         if data.get("object") == "whatsapp_business_account":
             for entry in data.get("entry", []):
